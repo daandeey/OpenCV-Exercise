@@ -1,16 +1,14 @@
 import cv2
 
-IMAGE_PATH = 'image_data'
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # Create a VideoCapture object and read from input file
-# cap = cv2.VideoCapture(f'{IMAGE_PATH}/tree.avi')
 cap = cv2.VideoCapture(0)
 
 # Check if camera opened successfully
 if (cap.isOpened()== False):
-    print("Error opening video file")
+    print("Error opening video cam")
 
 # Read until video is completed
 while(cap.isOpened()):
